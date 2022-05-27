@@ -1,0 +1,41 @@
+@use '/src/styles/constants/colors';
+
+.averageWrapper {
+  .descriptionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .scoreTextWrapper {
+    > p {
+      margin: 0;
+    }
+  }
+
+  .highLight {
+    position: relative;
+    bottom: 10px;
+    width: 70px;
+    height: 10px;
+    background-color: colors.$YELLOW;
+  }
+
+  .score {
+    position: relative;
+    z-index: 100;
+    color: colors.$RED;
+  }
+
+  .highScoreColor {
+    color: colors.$BLUE;
+  }
+
+  .rankText {
+    position: relative;
+    z-index: 100;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,45 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/sizes';
+
+.healthResultWrapper {
+  h2 {
+    font-size: sizes.$MEDIUM;
+  }
+
+  p {
+    font-size: sizes.$REGULAR;
+    line-height: 1.3;
+
+    .redText {
+      color: colors.$RED;
+    }
+
+    .blueText {
+      color: colors.$BLUE;
+    }
+
+    .blackText {
+      color: colors.$BLACK;
+    }
+
+    .highlight {
+      position: relative;
+      opacity: 0.9;
+
+      &::after {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        z-index: -5;
+        display: block;
+        width: 100%;
+        content: '';
+        border-bottom: 13px solid colors.$THEME;
+      }
+    }
+  }
+
+  .graphWrapper {
+    margin: 0 auto;
+  }
+}
