@@ -1,6 +1,7 @@
-import styles from './app.module.scss';
+import HealthCare from './healthCare';
 import MyHealth from './myHealth';
 import HealthResult from './healthResult';
+import styles from './app.module.scss';
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
         <main className={styles.scrollArea}>
           <MyHealth />
           <HealthResult />
-          <div style={{ height: '200px', backgroundColor: 'red' }}>다른컴포넌트</div>
+          <HealthCare />
         </main>
       </div>
     </div>

@@ -1,0 +1,25 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/sizes';
+
+.wrapper {
+  .header {
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  ul {
+    padding: 0;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: colors.$GRAY3;
+    list-style: disc;
+
+    li {
+      font-size: 10px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+  }
+}
