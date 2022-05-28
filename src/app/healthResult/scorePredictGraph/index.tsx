@@ -10,7 +10,7 @@ import {
 
 import cx from 'classnames';
 import DATA from 'data/response.json';
-import { COLORS, SIZES } from '../_shared';
+import { COLORS, SIZES, FONT_WEIGHT } from '../_shared';
 import PredictGraphStyle from './predictGraphStyle';
 import styles from './predictGraph.module.scss';
 
@@ -45,7 +45,11 @@ const DrawGraph = ({ wHscore, wHscoreDy }: IProps) => {
         labelComponent={
           <VictoryLabel
             style={[
-              { fill: ({ datum }) => (datum.x === 1 ? COLORS.$ORANGE : COLORS.$GREY_03), fontSize: SIZES.$REGULAR },
+              {
+                fill: ({ datum }) => (datum.x === 1 ? COLORS.$ORANGE : COLORS.$GREY_03),
+                fontSize: SIZES.$REGULAR,
+                fontWeight: FONT_WEIGHT.$SEMI_BOLD,
+              },
             ]}
             {...PredictGraphStyle.label}
           />
@@ -75,7 +79,7 @@ const DrawGraph = ({ wHscore, wHscoreDy }: IProps) => {
   );
 };
 
-const PredictGraph = () => {
+const ScorePredictGraph = () => {
   const {
     wxcResultMap: { wHscore },
     wxcResultMap: { wHscoreDy },
@@ -98,4 +102,4 @@ const PredictGraph = () => {
   );
 };
 
-export default PredictGraph;
+export default ScorePredictGraph;
