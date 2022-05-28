@@ -11,8 +11,8 @@ const init: IConvertedData[] = [];
 
 export const convertNumToUnit = (num: number) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-export const convertToData = (curCost: number, afterCost?: number) =>
-  [curCost, afterCost].reduce((acc, cost, i) => {
+export const convertToData = (costs: number[]) =>
+  costs.reduce((acc, cost, i) => {
     if (cost)
       acc[i] = {
         x: i + 1,
