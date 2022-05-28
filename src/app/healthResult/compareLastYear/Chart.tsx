@@ -9,7 +9,7 @@ import {
 } from 'victory';
 import { CallbackArgs } from 'victory-core';
 
-import { COLORS, SIZES } from '../_shared';
+import { COLORS, SIZES, FONT_WEIGHT } from '../_shared';
 
 interface IProps {
   chartDataList: {
@@ -33,7 +33,7 @@ const Chart = ({ chartDataList }: IProps) => {
     >
       <VictoryAxis
         style={{
-          tickLabels: { fontSize: SIZES.$REGULAR, fontWeight: 600, fill: COLORS.$GREY_03 },
+          tickLabels: { fontSize: SIZES.$REGULAR, fontWeight: FONT_WEIGHT.$SEMI_BOLD, fill: COLORS.$GREY_03 },
           axis: {
             stroke: 'transparent',
           },
@@ -80,7 +80,7 @@ const Chart = ({ chartDataList }: IProps) => {
           },
           labels: {
             fontSize: SIZES.$REGULAR,
-            fontWeight: 600,
+            fontWeight: FONT_WEIGHT.$SEMI_BOLD,
             fill: ({ index }: CallbackArgs) => (index === chartDataList.length - 1 ? COLORS.$ORANGE : COLORS.$GREY_03),
           },
         }}
