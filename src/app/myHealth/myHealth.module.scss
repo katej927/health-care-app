@@ -89,21 +89,3 @@
   text-align: center;
   cursor: pointer;
 }
-
-.analysis {
-  @include flexbox.flexbox('between', 'center');
-  font-size: 1.1rem;
-  line-height: 3rem;
-  letter-spacing: -0.6px;
-
-  > span {
-    font-weight: bold;
-  }
-
-  > button {
-    all: unset;
-    font-family: inherit;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-}
