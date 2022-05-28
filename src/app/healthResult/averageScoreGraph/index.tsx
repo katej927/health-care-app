@@ -3,7 +3,7 @@ import data from '../../../data/response.json';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryLine, VictoryScatter } from 'victory';
 import { CallbackArgs } from 'victory-core';
 import styles from './averageScoreGraph.module.scss';
-import { COLORS, SIZES } from '../_shared/styles';
+import { COLORS, SIZES, FONT_WEIGHT } from '../_shared/styles';
 
 const AverageScoreGraph = () => {
   const { userInfo, wxcResultMap } = data;
@@ -38,7 +38,12 @@ const AverageScoreGraph = () => {
         <VictoryAxis
           style={{
             axis: { stroke: 'rgba(255, 99, 71, 0)' },
-            tickLabels: { fontSize: SIZES.$MEDIUM, fontWeight: 700, fill: COLORS.$GREY_03 },
+            tickLabels: {
+              fontSize: SIZES.$MEDIUM,
+              fontWeight: FONT_WEIGHT.$SEMI_BOLD,
+              fill: COLORS.$GREY_03,
+              fontFamily: 'Helvetica Neue',
+            },
           }}
         />
         <VictoryBar
@@ -50,7 +55,8 @@ const AverageScoreGraph = () => {
             labels: {
               fill: ({ datum }: CallbackArgs) => (datum.user === '나' ? COLORS.$ORANGE : COLORS.$GREY_03),
               fontSize: SIZES.$MEDIUM,
-              fontWeight: 700,
+              fontWeight: FONT_WEIGHT.$SEMI_BOLD,
+              fontFamily: 'Helvetica Neue',
             },
           }}
           labels={({ datum }) => `${datum.score}점`}
