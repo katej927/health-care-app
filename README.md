@@ -142,7 +142,7 @@ const Compare = ({ wHscore, wHscoreDy }: IProps) => {
 
 <br />
 
-#### 4. 10년 후 예상 의료비 그래프
+### 4. 10년 후 예상 의료비 그래프
 <details>
  <summary> 펼치기 </summary>
 <br/>
