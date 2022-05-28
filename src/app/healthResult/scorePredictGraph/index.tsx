@@ -75,7 +75,7 @@ const DrawGraph = ({ wHscore, wHscoreDy }: IProps) => {
   );
 };
 
-const PredictGraph = () => {
+const ScorePredictGraph = () => {
   const {
     wxcResultMap: { wHscore },
     wxcResultMap: { wHscoreDy },
@@ -98,4 +98,4 @@ const PredictGraph = () => {
   );
 };
 
-export default PredictGraph;
+export default ScorePredictGraph;
