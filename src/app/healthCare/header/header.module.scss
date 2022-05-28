@@ -1,0 +1,17 @@
+@use 'src/styles/constants/sizes';
+@use '/src/styles/constants/colors';
+
+.wrapper {
+  h3 {
+    font-size: sizes.$MEDIUM;
+  }
+
+  div {
+    font-size: sizes.$SMALL;
+    color: colors.$GRAY02;
+
+    strong {
+      color: colors.$BLACK;
+    }
+  }
+}

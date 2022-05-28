@@ -82,6 +82,7 @@
 .resultButton {
   all: unset;
   width: 100%;
+  font-family: inherit;
   font-weight: bold;
   line-height: 2.5rem;
   color: colors.$GRAY6;
@@ -101,6 +102,7 @@
 
   > button {
     all: unset;
+    font-family: inherit;
     text-decoration: underline;
     cursor: pointer;
   }
