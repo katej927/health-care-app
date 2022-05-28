@@ -1,5 +1,5 @@
 import AverageScoreGraph from './averageScoreGraph';
-import PredictGraph from './predictGraph';
+import ScorePredictGraph from './scorePredictGraph';
 import CostPredictionGraph from './costPredictionGraph';
 import CompareLastYear from './compareLastYear';
 
@@ -8,7 +8,7 @@ const HealthResult = () => {
     <section>
       <CompareLastYear />
       <AverageScoreGraph />
-      <PredictGraph />
+      <ScorePredictGraph />
       <CostPredictionGraph />
     </section>
   );

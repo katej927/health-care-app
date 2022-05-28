@@ -142,7 +142,36 @@ const Compare = ({ wHscore, wHscoreDy }: IProps) => {
 
 <br />
 
-#### 4. 10년 후 예상 의료비 그래프1
+### 4. 10년 후 예상 의료비 그래프
+<details>
+ <summary> 펼치기 </summary>
+<br/>
+
+- 동작
+
+    * 금액이 많으면 ’00원 많아요’ 빨강 텍스트
+    * 금액이 적으면 ‘00원 적어요‘ 파랑 텍스트
+    * 동일하면 ‘현재와 같아요＇검정 텍스트
+
+- Graph 구현
+
+    `Victory` 라이브러리 (`Chart`, `Axis`, `Bar`, `Line`, `Scatter`, `Label` 활용) 
+    
+- animation
+    - 적용된 곳: Graph bar / line / number label, Text Hightlight
+
+    - 구현 방법: `victory.js`의 `animate`, `css`의 `animation` / `@keyframes to` / `background` 등
+
+- 정확한 숫자 계산
+    - `big.js` 활용 (선택 이유: `bignumber.js` 보다 작고 단순)
+- semantic tags
+    
+    `article` (컴포넌트), `h3` (강조 구문), `mark` (highlight)
+    
+- Clean Code
+    
+    UI를 담당할 파일과 나머지 (utils, graphOptions 등)를 구분
+</details>
  
 ## 맞춤 건강관리
 
