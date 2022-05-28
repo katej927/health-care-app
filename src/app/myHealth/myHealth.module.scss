@@ -82,26 +82,10 @@
 .resultButton {
   all: unset;
   width: 100%;
+  font-family: inherit;
   font-weight: bold;
   line-height: 2.5rem;
   color: colors.$GRAY6;
   text-align: center;
   cursor: pointer;
-}
-
-.analysis {
-  @include flexbox.flexbox('between', 'center');
-  font-size: 1.1rem;
-  line-height: 3rem;
-  letter-spacing: -0.6px;
-
-  > span {
-    font-weight: bold;
-  }
-
-  > button {
-    all: unset;
-    text-decoration: underline;
-    cursor: pointer;
-  }
 }

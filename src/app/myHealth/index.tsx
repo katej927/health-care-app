@@ -51,10 +51,6 @@ const MyHealth = () => {
             <dd>{resHeight}cm</dd>
           </div>
         </dl>
-        <div className={styles.analysis}>
-          <span>건강점수 분석 결과</span>
-          <button type='button'>결과 자세히 보기 {'>'}</button>
-        </div>
       </div>
     </section>
   );

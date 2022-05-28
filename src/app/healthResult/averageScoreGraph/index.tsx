@@ -3,7 +3,7 @@ import data from '../../../data/response.json';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryLine, VictoryScatter } from 'victory';
 import { CallbackArgs } from 'victory-core';
 import styles from './averageScoreGraph.module.scss';
-import { COLORS } from '../_shared/styles';
+import { COLORS, SIZES } from '../_shared/styles';
 
 const AverageScoreGraph = () => {
   const { userInfo, wxcResultMap } = data;
@@ -34,11 +34,11 @@ const AverageScoreGraph = () => {
           <div className={styles.highLight} />
         </div>
       </div>
-      <VictoryChart domainPadding={60}>
+      <VictoryChart domainPadding={40}>
         <VictoryAxis
           style={{
             axis: { stroke: 'rgba(255, 99, 71, 0)' },
-            tickLabels: { fontSize: 16, fontWeight: 700, fill: COLORS.$GREY_03 },
+            tickLabels: { fontSize: SIZES.$MEDIUM, fontWeight: 700, fill: COLORS.$GREY_03 },
           }}
         />
         <VictoryBar
@@ -49,12 +49,12 @@ const AverageScoreGraph = () => {
             data: { fill: ({ datum }) => (datum.user === '나' ? COLORS.$YELLOW : COLORS.$ORANGE) },
             labels: {
               fill: ({ datum }: CallbackArgs) => (datum.user === '나' ? COLORS.$ORANGE : COLORS.$GREY_03),
-              fontSize: 16,
+              fontSize: SIZES.$MEDIUM,
               fontWeight: 700,
             },
           }}
           labels={({ datum }) => `${datum.score}점`}
-          barWidth={35}
+          barWidth={50}
           height={250}
         />
         <VictoryLine
@@ -78,7 +78,7 @@ const AverageScoreGraph = () => {
               strokeWidth: 2,
             },
           }}
-          size={4}
+          size={6}
         />
       </VictoryChart>
     </div>
